@@ -7,19 +7,19 @@ dp[2] = 2;
 dp[3] = 3;
 let num = 1;
 
-function solution(){
+function solution() {
 
-    for(let i=4; i<=N; i++){
-        let numSquare = (num+1)*(num+1);
-        if(numSquare === i){
+    for (let i = 4; i <= N; i++) {
+        let numSquare = (num + 1) * (num + 1);
+        if (numSquare === i) {
             dp[i] = 1;
-            num +=1;
+            num += 1;
         }
-        else{
+        else {
             let temp = num;
-            while(temp>0){
-                let tempSquare = temp*temp
-                dp[i] = Math.min(dp[i], (dp[tempSquare]+dp[i-tempSquare]));
+            while (temp > 0) {
+                let tempSquare = temp * temp
+                dp[i] = Math.min(dp[i], (dp[tempSquare] + dp[i - tempSquare]));
                 temp--;
             }
         }
