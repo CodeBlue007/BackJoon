@@ -1,16 +1,8 @@
-15
-push 1
-push 2
-front
-back
-size
-empty
+7
 pop
+top
+push 123
+top
 pop
+top
 pop
-size
-empty
-pop
-push 3
-empty
-front
